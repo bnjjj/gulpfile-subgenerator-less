@@ -14,12 +14,12 @@ var gulpfileGenerator = module.exports = generators.Base.extend({
     self.prompt([{
       type: 'value',
       name: 'srcCss',
-      message: 'What is your relative directory path for your source files of scss (less) ?',
+      message: 'What is the relative path to your less source files?',
       default: './css/**/*.scss'
     }, {
       type: 'value',
       name: 'distCss',
-      message: 'What is your relative directory path for your dist files of scss (less) ?',
+      message: 'What is the relative path to your processed css dist files?',
       default: './dist/css'
     }, {
       type: 'value',
@@ -41,7 +41,7 @@ var gulpfileGenerator = module.exports = generators.Base.extend({
       self.prompt([{
         type: 'value',
         name: 'concatFile',
-        message: 'What is the name of your main css file for dist (less) ?',
+        message: 'What is the name of your main css file for dist (less)?',
         default: 'main.css'
       }], function (answer) {
         _.assign(self.vars, answer);
