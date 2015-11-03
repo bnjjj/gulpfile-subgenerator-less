@@ -12,5 +12,6 @@ gulp.task('less', function () {
 });
 
 gulp.task('less:watch', function () {
+  gulp.start('less');
   gulp.watch('<%= srcCss %>', ['less']);
 });
